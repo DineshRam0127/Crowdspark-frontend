@@ -46,7 +46,7 @@ const Signup = () => {
     try {
       console.log("h b a")
       setIsLoading(true);
-      const response = await axios.post("http://localhost:5000/api/auth/signup", { name, email, password });
+      const response = await axios.post("https://crowdspark-server.onrender.com/api/auth/signup", { name, email, password });
       console.log("h a a")
       setSuccessMessage(response.data.message);
       setTimeout(() => navigate("/"), 1500);
